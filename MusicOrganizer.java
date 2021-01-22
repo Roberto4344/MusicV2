@@ -98,8 +98,10 @@ public class MusicOrganizer
 
     public void listMatching(String searchString){
         for(String filename : files){
-            if(filename.contains(searchString))
+            if(filename.contains(searchString)){
                 System.out.println(filename);
+                player.startPlaying(filename);
+            }
         }
     }
 
@@ -109,9 +111,10 @@ public class MusicOrganizer
 
     public void playSamplesArtist(String searchString){
         for(String filename : files){
-            if(filename.contains(searchString))
+            if(filename.contains(searchString)){
                 System.out.println(filename);
+                player.startPlaying(filename);
+            }
         }
     }
 }
-
