@@ -103,5 +103,15 @@ public class MusicOrganizer
         }
     }
 
+    /**
+     * Añadimos el metodo playSamplesArtist
+     */
+
+    public void playSamplesArtist(String searchString){
+        for(String filename : files){
+            if(filename.contains(searchString))
+                System.out.println(filename);
+        }
+    }
 }
 
