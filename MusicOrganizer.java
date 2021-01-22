@@ -87,8 +87,21 @@ public class MusicOrganizer
         int position;
         position = 0 ;
         for (String filename : files){
-            position = position +1;
+            position = position + 1;
             System.out.println(position + ". " + filename) ;
         }
     }
+
+    /**
+     * Aqui añadimos el metodo listMaching
+     */
+
+    public void listMatching(String searchString){
+        for(String filename : files){
+            if(filename.contains(searchString))
+                System.out.println(filename);
+        }
+    }
+
 }
+
