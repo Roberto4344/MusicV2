@@ -91,6 +91,7 @@ public class MusicOrganizer
         while(index < files.size()){
             String filename = files.get(index);
             System.out.println(filename);
+            index++;
         }
     }
 
