@@ -83,12 +83,14 @@ public class MusicOrganizer
         player.stop();
     }
 
+    /**
+     * mostramos una lista con el metodo while
+     */
     public void listAllFiles(){
-        int position;
-        position = 0 ;
-        for (String filename : files){
-            position = position + 1;
-            System.out.println(position + ". " + filename) ;
+        int index= 0;
+        while(index < files.size()){
+            String filename = files.get(index);
+            System.out.println(filename);
         }
     }
 
@@ -100,7 +102,6 @@ public class MusicOrganizer
         for(String filename : files){
             if(filename.contains(searchString)){
                 System.out.println(filename);
-                player.startPlaying(filename);
             }
         }
     }
@@ -117,4 +118,5 @@ public class MusicOrganizer
             }
         }
     }
+
 }
