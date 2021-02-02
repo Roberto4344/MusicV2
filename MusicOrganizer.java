@@ -132,20 +132,19 @@ public class MusicOrganizer
     public int findFirst(String searchString){
         int index = 0;                  
         boolean searching = true;        
-        while (index < files.size()){
+        while (index < files.size() && searching){
             String filename = files.get(index);
             if(filename.contains(searchString)){
                 searching = false;
-                index = index + files.size();
             }
-            if(searching == true){
+            else{
                 index++;
             }           
         }
         if(searching == true){
-            index= -1 + files.size();
+            index= -1;
         }
-        return index - files.size();
+        return index;
     }
 }
 
