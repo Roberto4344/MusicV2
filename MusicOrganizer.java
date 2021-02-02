@@ -133,21 +133,18 @@ public class MusicOrganizer
         int index = 0;                  
         boolean searching = true;        
         while (index < files.size() && searching){
-            for (String filename : files){
-                if(filename.contains(searchString)){
-                    searching = false;
-                }
-                else{
-                    index++;
-                }
+            String filename = files.get(index);
+            if(filename.contains(searchString)){
+                searching = false;
             }
+            else{
+                index++;
+            }           
         }
         if(searching == true){
-            index= -1;
-        }
+                index= -1;
+            }
         return index;
-    }   
-    
-
+    }
 }
 
